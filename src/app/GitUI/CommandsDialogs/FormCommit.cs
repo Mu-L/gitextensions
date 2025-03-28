@@ -205,10 +205,13 @@ namespace GitUI.CommandsDialogs
                 _commitKind = value;
 
                 modifyCommitMessageButton.Visible = _useFormCommitMessage && CommitKind is not (CommitKind.Normal or CommitKind.Amend);
+                modifyCommitMessageButton.ForeColor = Application.IsDarkModeEnabled ? SystemColors.ControlText : SystemColors.HotTrack;
+
                 bool messageCanBeChanged = _useFormCommitMessage && CommitKind is (CommitKind.Normal or CommitKind.Amend);
                 Message.Enabled = messageCanBeChanged;
                 commitMessageToolStripMenuItem.Enabled = messageCanBeChanged;
                 commitTemplatesToolStripMenuItem.Enabled = messageCanBeChanged;
+                Message.EvaluateForecolor();
             }
         }
 
@@ -347,6 +350,10 @@ namespace GitUI.CommandsDialogs
             }
 
             toolStripStatusBranchIcon.AdaptImageLightness();
+
+            // Change the link color
+            commitAuthorStatus.LinkColor = Application.IsDarkModeEnabled ? Color.CornflowerBlue : Color.FromArgb(0, 0, 0xff);
+            remoteNameLabel.LinkColor = Application.IsDarkModeEnabled ? Color.CornflowerBlue : Color.Blue;
 
             splitLeft.Panel1.BackColor = OtherColors.PanelBorderColor;
             splitLeft.Panel2.BackColor = OtherColors.PanelBorderColor;
@@ -502,7 +509,7 @@ namespace GitUI.CommandsDialogs
 
         protected override void OnLoad(EventArgs e)
         {
-            showUntrackedFilesToolStripMenuItem.Checked = Module.EffectiveConfigFile.GetValue("status.showUntrackedFiles") != "no";
+            showUntrackedFilesToolStripMenuItem.Checked = Module.EffectiveConfigFile.GetValue("status.showuntrackedfiles") != "no";
             MinimizeBox = Owner is null;
             LoadCustomDifftools();
 

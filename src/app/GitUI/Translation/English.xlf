@@ -6624,6 +6624,14 @@ Value has been reset to empty value.</source>
         <source>Private key (*.ppk)</source>
         <target />
       </trans-unit>
+      <trans-unit id="btnRemoteColor.Text">
+        <source>Set color</source>
+        <target />
+      </trans-unit>
+      <trans-unit id="btnRemoteColorReset.Text">
+        <source>Default color</source>
+        <target />
+      </trans-unit>
       <trans-unit id="btnToggleState.toolTip1">
         <source>Enable or disable the selected remote</source>
         <target />
@@ -6666,6 +6674,10 @@ Value has been reset to empty value.</source>
       </trans-unit>
       <trans-unit id="lblMgtPuttyPanelHeader.Text">
         <source>PuTTY SSH</source>
+        <target />
+      </trans-unit>
+      <trans-unit id="lblRemoteColor.Text">
+        <source>Color</source>
         <target />
       </trans-unit>
       <trans-unit id="pnlMgtDetails.Text">
@@ -7982,6 +7994,10 @@ Context menu for additional operations</source>
       </trans-unit>
       <trans-unit id="checkBoxUpdateRefs.Text">
         <source>Rebase also dependent branches</source>
+        <target />
+      </trans-unit>
+      <trans-unit id="checkboxMergeAutoStash.Text">
+        <source>Automatically stash before doing a merge</source>
         <target />
       </trans-unit>
     </body>
@@ -10006,6 +10022,10 @@ Diff selection:
       </trans-unit>
       <trans-unit id="LocalRB.Text">
         <source>Local for current repository</source>
+        <target />
+      </trans-unit>
+      <trans-unit id="SystemRB.Text">
+        <source>System</source>
         <target />
       </trans-unit>
       <trans-unit id="label1.Text">
